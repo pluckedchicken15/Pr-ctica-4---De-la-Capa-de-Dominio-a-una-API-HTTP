@@ -43,6 +43,6 @@ app.post('/api/prestamos', async(req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log("El servidor esta corriendo en el puerto " + PORT);
+    console.log(`Servidor escuchando en http://localhost:${PORT}`);
 })
 
