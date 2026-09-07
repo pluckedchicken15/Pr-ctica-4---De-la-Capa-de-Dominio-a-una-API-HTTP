@@ -11,7 +11,6 @@ export function validarCrearPrestamo(cuerpo) {
     if (typeof c.socioId !== 'string' || c.socioId.trim() === '') {
         errores.push('socioId debe ser un texto no vacio');
     }
-    // 4. ejemplares: arreglo de enteros positivos, con al menos uno
     if (!Array.isArray(c.ejemplares) || c.ejemplares.length === 0) {
         errores.push('ejemplares debe ser un arreglo con al menos un elemento');
     }
@@ -21,8 +20,6 @@ export function validarCrearPrestamo(cuerpo) {
     if (errores.length > 0) {
         throw new ValidacionError(errores.join('; '));
     }
-    //  Ya comprobamos campo por campo, asi que aqui la asercion es
-    //  honesta: el dato cumple la forma.
     return c;
 }
 //# sourceMappingURL=validar.js.map
